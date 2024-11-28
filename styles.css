@@ -1,0 +1,525 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero {
+  background-image: url("Images/Hero_All\ Models_notext-Camera.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding-top: 60px;
+}
+
+.intro-section {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #cacaca;
+}
+
+.intro-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin-left: 0;
+}
+
+.intro-section p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  padding-left: 10%;
+  padding-right: 10%;
+  color: #333;
+}
+
+.carousel-section {
+  padding: 40px;
+  background-color: #f3f3f3;
+  /* margin-bottom: 20px; */
+  /* border: 1px 1px solid #444444; */
+  /* border-radius: 8px; */
+  width: 100%;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0;
+  padding: 20px;
+}
+
+.carousel-track-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.carousel-track {
+  position: relative;
+  height: 300px;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: none;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  display: block;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.carousel-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.carousel-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.carousel-indicator.active {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 15px 30px;
+  display: flex;
+  gap: 70px;
+  justify-content: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar a:hover {
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 50px 20px;
+  }
+
+  .carousel-item {
+    width: 80%;
+  }
+
+  .navbar ul {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .navbar a {
+    font-size: 1rem;
+  }
+
+  .intro-section h2 {
+    font-size: 2rem;
+  }
+}
+
+.carousel-section h2 {
+  padding-left: 20px;
+  text-align: left;
+}
+
+.section-description {
+  max-width: 800px;
+  margin: 0 0 40px 20px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.section-with-placeholder {
+  display: flex;
+  gap: 40px;
+  padding: 80px 40px;
+  max-width: 1400px;
+  margin: 0;
+}
+
+.section-with-placeholder + .section-with-placeholder {
+  border-top: 1px solid #eee;
+}
+
+.content-column {
+  flex: 2;
+  padding: 20px;
+}
+
+.section-description {
+  margin: 0 0 40px 20px;
+  padding: 0 20px;
+  line-height: 1.6;
+  color: #333;
+}
+
+h2 {
+  margin-left: 20px;
+  text-align: left;
+}
+
+.image-grid {
+  margin-left: 20px;
+}
+
+main {
+  max-width: 1400px;
+  margin: 0;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: auto;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.close-button {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #bbb;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .carousel {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .carousel-track {
+    height: 250px;
+  }
+
+  .carousel-button {
+    padding: 8px 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .carousel-track {
+    height: 200px;
+  }
+
+  .carousel-button {
+    padding: 6px 10px;
+  }
+}
+
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.carousel-section {
+  display: flex;
+  align-items: flex-start;
+  /* gap: 40px; */
+  padding: 40px;
+  background-color: #eaeaea;
+  margin-bottom: 40px;
+  /* border: 1px solid #444444;
+  border-radius: 8px; */
+}
+
+.carousel-content {
+  flex: 1;
+  min-width: 0; /* Prevents flex item from overflowing */
+}
+
+.section-placeholder {
+  flex: 0 0 800px; /* Fixed width */
+  height: 800px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.section-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1800px) {
+  .section-placeholder {
+    flex: 0 0 600px;
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .section-placeholder {
+    flex: 0 0 400px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel-section {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .section-placeholder {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 10px;
+  }
+
+  .carousel-section {
+    padding: 20px;
+  }
+
+  .section-placeholder {
+    height: 300px;
+  }
+}
+
+/* Hero Section Base Styles */
+.hero-section {
+  height: 100vh;
+  background-image: url("Images/Hero_All\ Models_notext-Camera.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 20px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.hero-description {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 1024px) {
+  .hero-section {
+    background-attachment: scroll; /* Better performance on tablets */
+    height: 80vh;
+  }
+
+  .hero-content {
+    max-width: 90%;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    max-width: 600px;
+    padding: 0 20px;
+  }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+  .hero-section {
+    height: 70vh;
+    min-height: 500px;
+    padding: 60px 15px; /* Account for mobile navigation */
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    padding: 0 10px;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    padding: 0 15px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+  .hero-section {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+/* Ensure text remains readable on all backgrounds */
+.hero-title,
+.hero-description {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Optional: Add animation for content */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content {
+  animation: fadeIn 1s ease-out;
+}
