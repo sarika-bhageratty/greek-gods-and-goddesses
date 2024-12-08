@@ -183,6 +183,18 @@ footer {
   color: #ccc;
 }
 
+.navbar-brand {
+  color: white !important;
+  text-decoration: none;
+  font-size: 0.8rm;
+  font-weight: 20;
+  padding-bottom: 10px;
+}
+
+.navbar-brand:hover {
+  color: #ccc !important;
+}
+
 @media (max-width: 768px) {
   .hero {
     padding: 50px 20px;

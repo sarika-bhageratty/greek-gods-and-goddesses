@@ -16,10 +16,10 @@
   </head>
   <body>
     <nav class="navbar">
-      <div class="nav-brand">
+      <a class="navbar-brand text-white" href="#">
         This is an experiment using AI for creating a site. Some content,
-        images, audio, and code are AI-generated.
-      </div>
+        images, audio, and code are AI-generated.</a
+      >
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -110,11 +110,17 @@
           <div class="section-placeholder">
             <model-viewer
               src="./models-for-ar/zeus.glb"
+              poster="Images/Zeus/zeus_poster"
               alt="A 3D model of Zeus"
               ar
               auto-rotate
               camera-controls
+              loading="lazy"
+              camera-orbit="0deg 75deg 105%"
             >
+              <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+              </div>
             </model-viewer>
           </div>
         </div>
@@ -159,11 +165,17 @@
           <div class="section-placeholder">
             <model-viewer
               src="./models-for-ar/hera.glb"
+              poster="Images/Hera/hera_poster"
               alt="A 3D model of Hera"
               ar
               auto-rotate
               camera-controls
+              loading="lazy"
+              camera-orbit="0deg 75deg 105%"
             >
+              <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+              </div>
             </model-viewer>
           </div>
         </div>
@@ -220,11 +232,17 @@
           <div class="section-placeholder">
             <model-viewer
               src="./models-for-ar/aphrodite.glb"
+              poster="Images/Aphrodite/aphrodite_poster"
               alt="A 3D model of Aphrodite"
               ar
               auto-rotate
               camera-controls
+              loading="lazy"
+              camera-orbit="0deg 75deg 105%"
             >
+              <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+              </div>
             </model-viewer>
           </div>
         </div>
@@ -276,11 +294,17 @@
           <div class="section-placeholder">
             <model-viewer
               src="./models-for-ar/apollo.glb"
+              poster="Images/Apollo/apollo_poster"
               alt="A 3D model of Apollo"
               ar
               auto-rotate
               camera-controls
+              loading="lazy"
+              camera-orbit="0deg 75deg 105%"
             >
+              <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+              </div>
             </model-viewer>
           </div>
         </div>
