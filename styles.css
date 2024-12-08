@@ -63,6 +63,7 @@ html {
   max-width: 600px;
   margin: 0;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .carousel-track-container {
@@ -110,6 +111,7 @@ html {
   cursor: pointer;
   border-radius: 50%;
   z-index: 2;
+  font-size: 1.2rem;
 }
 
 .carousel-button:hover {
@@ -212,8 +214,10 @@ footer {
 .section-description {
   max-width: 800px;
   margin: 0 0 40px 20px;
+  padding: 0 20px;
   line-height: 1.6;
   color: #e0e0e0;
+  font-size: 1.1rem;
 }
 
 .section-with-placeholder {
@@ -292,9 +296,23 @@ main {
 }
 
 /* Responsive styles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .carousel {
     max-width: 100%;
+    padding: 15px;
+  }
+
+  .carousel-track {
+    height: 350px;
+  }
+
+  .carousel-button {
+    padding: 12px 18px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .carousel {
     padding: 10px;
   }
 
@@ -303,7 +321,18 @@ main {
   }
 
   .carousel-button {
-    padding: 8px 12px;
+    padding: 10px 15px;
+    background: rgba(215, 215, 215, 0.3);
+  }
+
+  .carousel-nav {
+    margin-top: 15px;
+    gap: 12px;
+  }
+
+  .carousel-indicator {
+    width: 12px;
+    height: 12px;
   }
 }
 
@@ -313,7 +342,34 @@ main {
   }
 
   .carousel-button {
-    padding: 6px 10px;
+    padding: 8px 12px;
+    font-size: 1rem;
+  }
+
+  .carousel-button.prev {
+    left: 5px;
+  }
+
+  .carousel-button.next {
+    right: 5px;
+  }
+
+  .carousel-nav {
+    margin-top: 12px;
+    gap: 10px;
+  }
+}
+
+/* Add touch-friendly improvements */
+@media (hover: none) {
+  .carousel-button {
+    opacity: 1;
+    background: rgba(215, 215, 215, 0.3);
+  }
+
+  .carousel-indicator {
+    min-width: 12px;
+    min-height: 12px;
   }
 }
 
@@ -379,6 +435,12 @@ main {
     height: 350px;
     margin: 0 auto;
   }
+
+  .section-description {
+    margin: 0 0 30px 10px;
+    padding: 0 15px;
+    max-width: 80%;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -394,6 +456,13 @@ main {
   .section-placeholder {
     height: 300px;
   }
+
+  .section-description {
+    margin: 0 0 20px 5px;
+    padding: 0 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -404,6 +473,13 @@ main {
 
   .section-placeholder {
     height: 250px;
+  }
+
+  .section-description {
+    margin: 0 0 15px 0;
+    padding: 0 15px;
+    font-size: 0.95rem;
+    text-align: left;
   }
 }
 
